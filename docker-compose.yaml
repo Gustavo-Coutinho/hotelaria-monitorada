@@ -5,9 +5,8 @@ services:
   app:
     build:
             context: .
-            dockerfile: controle-hotel
     ports:
-      - "8000:8000"
+      - "5000:5000"
     volumes:
       - .:/app
 

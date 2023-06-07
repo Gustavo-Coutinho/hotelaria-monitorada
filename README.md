@@ -1,16 +1,18 @@
-# Projeto Hotel - APS
+# Hotelaria Monitorada - TCC
 
-Este projeto foi desenvolvido como parte do trabalho semestral do curso de Ciência da Computação da UNIP. O objetivo da aplicação é ajudar na gestão ambiental de um hotel, minimizando o desperdício de água e energia nos quartos por meio da integração de sensores de presença, termostatos, chuveiros inteligentes e tomadas programáveis.
+Este projeto foi desenvolvido como parte do trabalho de conclusão de curso de Ciência da Computação na UNIP. O objetivo da aplicação é monitorar uma aplicação que ajuda na gestão ambiental de um hotel, minimizando o desperdício de água e energia nos quartos por meio da integração de sensores de presença, termostatos, chuveiros inteligentes e tomadas programáveis. O monitoramento se faz necessário pois, caso haja alguma anomalia no sistema ou algum comportamento que não seja interessante às regras de negócio, é possível atuar com uma correção.
 
 ## Funcionalidades
 
-O projeto consiste em uma API com as seguintes rotas e funcionalidades:
+O projeto consiste no estabelecimento de monitoramento de uma API com as seguintes rotas e funcionalidades:
 
 - Monitoramento de presença (`GET /api/presenca`): Simula a detecção de presença no quarto do hotel (hóspede, funcionário, animal ou vazio).
 - Controle de termostato (`POST /api/termostato`): Ajusta a temperatura do ar-condicionado ou aquecedor do quarto do hotel com base na presença detectada e nas preferências do hóspede.
 - Controle de chuveiro inteligente (`POST /api/chuveiro`): Regula o fluxo e a temperatura da água do chuveiro do quarto do hotel com base na presença detectada e nas preferências do hóspede.
 - Controle de tomadas programáveis (`POST /api/tomadas`): Liga ou desliga as tomadas elétricas do quarto do hotel com base na presença detectada e nas preferências do hóspede.
 - Ajustar dispositivos (`POST /api/ajustar_dispositivos`): Integra a lógica de interação entre os serviços, ajustando os dispositivos com base na presença detectada no quarto do hotel.
+
+Para isso, serão utilizadas as ferramentas Telegraf, Influxdb e Grafana, tendo como base contêineres Docker.
 
 ## Requisitos
 
@@ -87,5 +89,5 @@ Você pode testar a API usando um cliente REST, como o [Postman](https://www.pos
    - Insira o JSON: `{"presenca": "hospede", "temperatura_desejada": 22, "fluxo_desejado": 2, "temperatura_chuveiro_desejada": 35, "programacao_tomadas": "07:00-23:00"}`
    - Clique em "Send" e verifique a resposta.
 
-Com estes passos, você pode testar todas as rotas criadas na APS usando o Postman.
+Com estes passos, você pode testar todas as rotas usando o Postman.
 
